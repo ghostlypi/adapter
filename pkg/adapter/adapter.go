@@ -68,9 +68,9 @@ func (a *Adapter) RequestPageFromDatasource(
 	req := &Request{
 		BaseURL: request.Address,
 
-		// Basic Auth
-		Username: request.Auth.Basic.Username,
-		Password: request.Auth.Basic.Password,
+		// Basic Auth -- This is not supported for this API
+		// Username: request.Auth.Basic.Username,
+		// Password: request.Auth.Basic.Password,
 
 		// API Key or OAuth2 Token
 		Token:            request.Auth.HTTPAuthorization,

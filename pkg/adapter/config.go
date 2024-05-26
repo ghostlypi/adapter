@@ -25,8 +25,10 @@ type Config struct {
 	// SCAFFOLDING #3 - pkg/adapter/config.go - pass Adapter config fields.
 	// Every field MUST have a `json` tag.
 
+	//No configuration fields necessary for this API.
+
 	// Example config field.
-	APIVersion string `json:"apiVersion,omitempty"`
+	// APIVersion string `json:"apiVersion,omitempty"`
 }
 
 // ValidateConfig validates that a Config received in a GetPage call is valid.
@@ -36,8 +38,6 @@ func (c *Config) Validate(_ context.Context) error {
 	switch {
 	case c == nil:
 		return errors.New("request contains no config")
-	case c.APIVersion == "":
-		return errors.New("apiVersion is not set")
 	default:
 		return nil
 	}
